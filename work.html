@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- Handled by Exflow.site -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -49,6 +47,30 @@
   <style>
     html.w-mod-js:not(.w-mod-ix3) :is(.navigation-link .nav-text.first, .navigation-link .nav-text.second, .display-1.second) {
       visibility: hidden !important;
+    }
+
+    /* Work page title alignment */
+    .work-page-title-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
+
+    .work-page-title {
+      text-align: left;
+    }
+
+    @media screen and (max-width: 767px) {
+      .work-page-title-wrapper {
+        justify-content: flex-start;
+        margin-bottom: 40px;
+      }
+
+      .work-page-title {
+        text-align: left;
+      }
     }
   </style>
 
@@ -177,15 +199,12 @@
    <!-- /WORK PAGE TITLE / HERO TEXT -->
    <!-- WORK PROJECT GRID -->
    <section class="section with-work-page">
-	    <div class="margin-50">
-         
-        </div>
-	    <div>
-          <h2 class="display-1 second">
-           Selected Work
-          </h2>
-         </div>
     <div class="container">
+     <div class="work-page-title-wrapper">
+      <h1 class="display-1 second work-page-title">
+       Selected Work
+      </h1>
+     </div>
      <div>
       <div class="w-dyn-list">
        <div class="work-grid w-dyn-items" role="list">
