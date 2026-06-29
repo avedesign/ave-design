@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ease: "none",
       scrollTrigger: {
         trigger: element,
-        start: "top 100%",
+        start: "top 130%",
         end: "top 20%",
         scrub: 1.2
       }
