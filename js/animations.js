@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     element.style.visibility = "visible";
 
     const split = new SplitText(element, {
-      type: "chars"
+      type: "words,chars",
+      wordsClass: "split-word",
+      charsClass: "split-char"
     });
 
     gsap.set(split.chars, {
@@ -23,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ease: "none",
       scrollTrigger: {
         trigger: element,
-        start: "top 100%",
+        start: "top bottom",
         end: "top 20%",
-        scrub: 1.2
+        scrub: 0.8
       }
     });
   });
