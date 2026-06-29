@@ -4363,7 +4363,12 @@ blockquote {
     white-space: normal;
   }
 }
+.split-line {
+  display: block;
+}
+
 .split-word {
   display: inline-block;
   white-space: nowrap;
+}
 }

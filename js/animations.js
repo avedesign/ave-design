@@ -10,24 +10,28 @@ document.addEventListener("DOMContentLoaded", function () {
     element.style.visibility = "visible";
 
     const split = new SplitText(element, {
-      type: "words,chars",
-      wordsClass: "split-word",
-      charsClass: "split-char"
+      type: "lines,words",
+      linesClass: "split-line",
+      wordsClass: "split-word"
     });
 
-    gsap.set(split.chars, {
-      color: "rgba(0,0,0,0.15)"
+    /* Start: first line black, all other lines grey */
+    split.lines.forEach(function (line, index) {
+      gsap.set(line, {
+        color: index === 0 ? "#181818" : "rgba(0,0,0,0.15)"
+      });
     });
 
-    gsap.to(split.chars, {
+    /* Scroll: grey lines slowly become black */
+    gsap.to(split.lines.slice(1), {
       color: "#181818",
-      stagger: 0.03,
+      stagger: 0.15,
       ease: "none",
       scrollTrigger: {
         trigger: element,
         start: "top bottom",
         end: "top 20%",
-        scrub: 0.8
+        scrub: 1.2
       }
     });
   });
