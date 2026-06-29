@@ -2222,7 +2222,13 @@ blockquote {
 .section.with-light-color.less-padding {
   padding-top: 250px;
 }
-
+.work-page-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 120px;      /* was 50px */
+    margin-bottom: 80px;
+}
 .section.with-work-page {
   z-index: 20;
   background-color: var(--fourth-color);
